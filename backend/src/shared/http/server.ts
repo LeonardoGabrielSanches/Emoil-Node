@@ -6,6 +6,7 @@ import 'express-async-errors';
 
 import '../database';
 import '../container';
+import '../jobs';
 
 import routes from './routes';
 

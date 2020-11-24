@@ -17,7 +17,6 @@ class Customer {
   name: string;
 
   @Column()
-  @Exclude()
   email: string;
 
   @CreateDateColumn()

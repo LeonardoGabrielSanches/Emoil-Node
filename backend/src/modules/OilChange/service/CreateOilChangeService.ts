@@ -39,12 +39,12 @@ class CreateOilChangeService {
     // const timeZone = 'America/Sao_Paulo';
     // const zonedDate = parseFromTimeZone(date, { timeZone });
 
-    const expiration_date = addMonths(date, oil.expirationInMonth);
+    // const expiration_date = addMonths(date, oil.expirationInMonth);
 
     const oilChange = await this.oilChangeRepository.create({
       customer,
       oil,
-      expiration_date,
+      expiration_date: new Date(),
     });
 
     return oilChange;

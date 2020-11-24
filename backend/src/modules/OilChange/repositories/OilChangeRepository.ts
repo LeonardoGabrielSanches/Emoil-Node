@@ -27,7 +27,10 @@ class OilChangeRepository implements IOilChangeRepository {
   }
 
   public async getOilChangeByDate(date: Date): Promise<OilChange[]> {
-    return this.ormRepository.find({ where: { expiration_date: date } });
+    return this.ormRepository.find({
+      where: { expiration_date: date },
+      relations: ['customer', 'oil'],
+    });
   }
 }
 
