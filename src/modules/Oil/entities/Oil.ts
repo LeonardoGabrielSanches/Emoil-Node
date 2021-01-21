@@ -17,7 +17,6 @@ class Oil {
   name: string;
 
   @Column()
-  @Exclude()
   expirationInMonth: number;
 
   @CreateDateColumn()

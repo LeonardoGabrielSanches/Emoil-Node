@@ -3,3 +3,6 @@ dist/
 node_modules/
 ormconfig.json
 .vs/
+
+
+.env
